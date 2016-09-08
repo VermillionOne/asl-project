@@ -1,0 +1,463 @@
+[2016-09-07 11:49:47] local.ERROR: exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Connection refused' in /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:119
+Stack trace:
+#0 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(119): PDO->__construct('mysql:host=127....', 'homestead', 'secret', Array)
+#1 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(56): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'homestead', 'secret', Array)
+#2 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=127....', Array, Array)
+#3 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(100): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
+#5 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php(956): call_user_func(Object(Closure))
+#6 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php(824): Illuminate\Database\Connection->getPdo()
+#7 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php(709): Illuminate\Database\Connection->reconnectIfMissingConnection()
+#8 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php(481): Illuminate\Database\Connection->run('create table `m...', Array, Object(Closure))
+#9 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(83): Illuminate\Database\Connection->statement('create table `m...')
+#10 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(229): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#11 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(148): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#12 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(142): Illuminate\Database\Schema\Builder->create('migrations', Object(Closure))
+#13 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/InstallCommand.php(54): Illuminate\Database\Migrations\DatabaseMigrationRepository->createRepository()
+#14 [internal function]: Illuminate\Database\Console\Migrations\InstallCommand->fire()
+#15 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#16 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#17 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(818): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\InstallCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 /Users/Vermillion/learning-laravel-5/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#24 {main}  
+[2016-09-07 12:10:28] local.ERROR: exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Connection refused' in /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:119
+Stack trace:
+#0 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(119): PDO->__construct('mysql:host=127....', 'homestead', 'secret', Array)
+#1 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(56): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'homestead', 'secret', Array)
+#2 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=127....', Array, Array)
+#3 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(100): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
+#5 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php(956): call_user_func(Object(Closure))
+#6 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php(824): Illuminate\Database\Connection->getPdo()
+#7 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php(709): Illuminate\Database\Connection->reconnectIfMissingConnection()
+#8 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php(351): Illuminate\Database\Connection->run('select * from i...', Array, Object(Closure))
+#9 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Schema/MySqlBuilder.php(21): Illuminate\Database\Connection->select('select * from i...', Array)
+#10 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(154): Illuminate\Database\Schema\MySqlBuilder->hasTable('migrations')
+#11 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(474): Illuminate\Database\Migrations\DatabaseMigrationRepository->repositoryExists()
+#12 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(92): Illuminate\Database\Migrations\Migrator->repositoryExists()
+#13 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(58): Illuminate\Database\Console\Migrations\MigrateCommand->prepareDatabase()
+#14 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#15 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#16 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#17 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(818): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 /Users/Vermillion/learning-laravel-5/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#24 {main}  
+[2016-09-07 12:10:30] local.ERROR: exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Connection refused' in /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:119
+Stack trace:
+#0 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(119): PDO->__construct('mysql:host=127....', 'homestead', 'secret', Array)
+#1 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(56): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'homestead', 'secret', Array)
+#2 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=127....', Array, Array)
+#3 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(100): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
+#5 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php(956): call_user_func(Object(Closure))
+#6 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php(824): Illuminate\Database\Connection->getPdo()
+#7 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php(709): Illuminate\Database\Connection->reconnectIfMissingConnection()
+#8 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php(481): Illuminate\Database\Connection->run('create table `m...', Array, Object(Closure))
+#9 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(83): Illuminate\Database\Connection->statement('create table `m...')
+#10 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(229): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#11 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(148): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#12 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(142): Illuminate\Database\Schema\Builder->create('migrations', Object(Closure))
+#13 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/InstallCommand.php(54): Illuminate\Database\Migrations\DatabaseMigrationRepository->createRepository()
+#14 [internal function]: Illuminate\Database\Console\Migrations\InstallCommand->fire()
+#15 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#16 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#17 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(818): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\InstallCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 /Users/Vermillion/learning-laravel-5/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#24 {main}  
+[2016-09-07 12:11:22] local.ERROR: exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'ASL-project'' in /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:119
+Stack trace:
+#0 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(119): PDO->__construct('mysql:host=127....', 'homestead', 'secret', Array)
+#1 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(56): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'homestead', 'secret', Array)
+#2 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=127....', Array, Array)
+#3 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(100): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
+#5 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php(956): call_user_func(Object(Closure))
+#6 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php(824): Illuminate\Database\Connection->getPdo()
+#7 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php(709): Illuminate\Database\Connection->reconnectIfMissingConnection()
+#8 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php(481): Illuminate\Database\Connection->run('create table `m...', Array, Object(Closure))
+#9 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(83): Illuminate\Database\Connection->statement('create table `m...')
+#10 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(229): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#11 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(148): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#12 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(142): Illuminate\Database\Schema\Builder->create('migrations', Object(Closure))
+#13 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/InstallCommand.php(54): Illuminate\Database\Migrations\DatabaseMigrationRepository->createRepository()
+#14 [internal function]: Illuminate\Database\Console\Migrations\InstallCommand->fire()
+#15 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#16 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#17 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(818): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\InstallCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 /Users/Vermillion/learning-laravel-5/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#24 {main}  
+[2016-09-07 12:54:30] local.ERROR: exception 'PDOException' with message 'SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'users' already exists' in /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php:480
+Stack trace:
+#0 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php(480): PDOStatement->execute()
+#1 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php(754): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'create table `u...', Array)
+#2 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php(717): Illuminate\Database\Connection->runQueryCallback('create table `u...', Array, Object(Closure))
+#3 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php(481): Illuminate\Database\Connection->run('create table `u...', Array, Object(Closure))
+#4 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(83): Illuminate\Database\Connection->statement('create table `u...')
+#5 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(229): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#6 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(148): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#7 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(238): Illuminate\Database\Schema\Builder->create('users', Object(Closure))
+#8 /Users/Vermillion/learning-laravel-5/database/migrations/2014_10_12_000000_create_users_table.php(23): Illuminate\Support\Facades\Facade::__callStatic('create', Array)
+#9 /Users/Vermillion/learning-laravel-5/database/migrations/2014_10_12_000000_create_users_table.php(23): Illuminate\Support\Facades\Schema::create('users', Object(Closure))
+#10 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(162): CreateUsersTable->up()
+#11 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(130): Illuminate\Database\Migrations\Migrator->runUp('/Users/Vermilli...', 1, false)
+#12 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(97): Illuminate\Database\Migrations\Migrator->runMigrationList(Array, Array)
+#13 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(66): Illuminate\Database\Migrations\Migrator->run(Array, Array)
+#14 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#15 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#16 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#17 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(818): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 /Users/Vermillion/learning-laravel-5/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#24 {main}
+
+Next exception 'Illuminate\Database\QueryException' with message 'SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'users' already exists (SQL: create table `users` (`id` int unsigned not null auto_increment primary key, `name` varchar(255) not null, `email` varchar(255) not null, `password` varchar(255) not null, `remember_token` varchar(100) null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8 collate utf8_unicode_ci)' in /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php:761
+Stack trace:
+#0 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php(717): Illuminate\Database\Connection->runQueryCallback('create table `u...', Array, Object(Closure))
+#1 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php(481): Illuminate\Database\Connection->run('create table `u...', Array, Object(Closure))
+#2 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(83): Illuminate\Database\Connection->statement('create table `u...')
+#3 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(229): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#4 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(148): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#5 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(238): Illuminate\Database\Schema\Builder->create('users', Object(Closure))
+#6 /Users/Vermillion/learning-laravel-5/database/migrations/2014_10_12_000000_create_users_table.php(23): Illuminate\Support\Facades\Facade::__callStatic('create', Array)
+#7 /Users/Vermillion/learning-laravel-5/database/migrations/2014_10_12_000000_create_users_table.php(23): Illuminate\Support\Facades\Schema::create('users', Object(Closure))
+#8 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(162): CreateUsersTable->up()
+#9 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(130): Illuminate\Database\Migrations\Migrator->runUp('/Users/Vermilli...', 1, false)
+#10 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(97): Illuminate\Database\Migrations\Migrator->runMigrationList(Array, Array)
+#11 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(66): Illuminate\Database\Migrations\Migrator->run(Array, Array)
+#12 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#13 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#14 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#15 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(818): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /Users/Vermillion/learning-laravel-5/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 {main}  
+[2016-09-07 12:59:13] local.ERROR: exception 'PDOException' with message 'SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'users' already exists' in /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php:480
+Stack trace:
+#0 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php(480): PDOStatement->execute()
+#1 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php(754): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'create table `u...', Array)
+#2 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php(717): Illuminate\Database\Connection->runQueryCallback('create table `u...', Array, Object(Closure))
+#3 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php(481): Illuminate\Database\Connection->run('create table `u...', Array, Object(Closure))
+#4 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(83): Illuminate\Database\Connection->statement('create table `u...')
+#5 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(229): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#6 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(148): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#7 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(238): Illuminate\Database\Schema\Builder->create('users', Object(Closure))
+#8 /Users/Vermillion/learning-laravel-5/database/migrations/2014_10_12_000000_create_users_table.php(26): Illuminate\Support\Facades\Facade::__callStatic('create', Array)
+#9 /Users/Vermillion/learning-laravel-5/database/migrations/2014_10_12_000000_create_users_table.php(26): Illuminate\Support\Facades\Schema::create('users', Object(Closure))
+#10 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(162): CreateUsersTable->up()
+#11 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(130): Illuminate\Database\Migrations\Migrator->runUp('/Users/Vermilli...', 1, false)
+#12 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(97): Illuminate\Database\Migrations\Migrator->runMigrationList(Array, Array)
+#13 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(66): Illuminate\Database\Migrations\Migrator->run(Array, Array)
+#14 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#15 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#16 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#17 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(818): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 /Users/Vermillion/learning-laravel-5/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#24 {main}
+
+Next exception 'Illuminate\Database\QueryException' with message 'SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'users' already exists (SQL: create table `users` (`id` int unsigned not null auto_increment primary key, `username` varchar(255) not null, `email` varchar(255) not null, `password` varchar(255) not null, `firstname` varchar(255) not null, `lastname` varchar(255) not null, `avatar` varchar(255) not null, `remember_token` varchar(100) null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8 collate utf8_unicode_ci)' in /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php:761
+Stack trace:
+#0 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php(717): Illuminate\Database\Connection->runQueryCallback('create table `u...', Array, Object(Closure))
+#1 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php(481): Illuminate\Database\Connection->run('create table `u...', Array, Object(Closure))
+#2 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(83): Illuminate\Database\Connection->statement('create table `u...')
+#3 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(229): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#4 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(148): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#5 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(238): Illuminate\Database\Schema\Builder->create('users', Object(Closure))
+#6 /Users/Vermillion/learning-laravel-5/database/migrations/2014_10_12_000000_create_users_table.php(26): Illuminate\Support\Facades\Facade::__callStatic('create', Array)
+#7 /Users/Vermillion/learning-laravel-5/database/migrations/2014_10_12_000000_create_users_table.php(26): Illuminate\Support\Facades\Schema::create('users', Object(Closure))
+#8 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(162): CreateUsersTable->up()
+#9 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(130): Illuminate\Database\Migrations\Migrator->runUp('/Users/Vermilli...', 1, false)
+#10 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(97): Illuminate\Database\Migrations\Migrator->runMigrationList(Array, Array)
+#11 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(66): Illuminate\Database\Migrations\Migrator->run(Array, Array)
+#12 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#13 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#14 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#15 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(818): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /Users/Vermillion/learning-laravel-5/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 {main}  
+[2016-09-07 13:39:06] local.ERROR: exception 'ErrorException' with message 'include(/Users/Vermillion/learning-laravel-5/vendor/composer/../../database/migrations/2014_10_12_000000_create_users_table.php): failed to open stream: No such file or directory' in /Users/Vermillion/learning-laravel-5/vendor/composer/ClassLoader.php:414
+Stack trace:
+#0 /Users/Vermillion/learning-laravel-5/vendor/composer/ClassLoader.php(414): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'include(/Users/...', '/Users/Vermilli...', 414, Array)
+#1 /Users/Vermillion/learning-laravel-5/vendor/composer/ClassLoader.php(414): Composer\Autoload\includeFile()
+#2 /Users/Vermillion/learning-laravel-5/vendor/composer/ClassLoader.php(301): Composer\Autoload\includeFile('/Users/Vermilli...')
+#3 [internal function]: Composer\Autoload\ClassLoader->loadClass('CreateUsersTabl...')
+#4 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(369): spl_autoload_call('CreateUsersTabl...')
+#5 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(156): Illuminate\Database\Migrations\Migrator->resolve('2016_09_07_1313...')
+#6 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(130): Illuminate\Database\Migrations\Migrator->runUp('/Users/Vermilli...', 1, false)
+#7 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(97): Illuminate\Database\Migrations\Migrator->runMigrationList(Array, Array)
+#8 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(66): Illuminate\Database\Migrations\Migrator->run(Array, Array)
+#9 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#10 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#11 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#12 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(818): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /Users/Vermillion/learning-laravel-5/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 {main}  
+[2016-09-07 13:39:28] local.ERROR: exception 'PDOException' with message 'SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'migrations' already exists' in /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php:480
+Stack trace:
+#0 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php(480): PDOStatement->execute()
+#1 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php(754): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'create table `m...', Array)
+#2 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php(717): Illuminate\Database\Connection->runQueryCallback('create table `m...', Array, Object(Closure))
+#3 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php(481): Illuminate\Database\Connection->run('create table `m...', Array, Object(Closure))
+#4 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(83): Illuminate\Database\Connection->statement('create table `m...')
+#5 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(229): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#6 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(148): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#7 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(142): Illuminate\Database\Schema\Builder->create('migrations', Object(Closure))
+#8 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/InstallCommand.php(54): Illuminate\Database\Migrations\DatabaseMigrationRepository->createRepository()
+#9 [internal function]: Illuminate\Database\Console\Migrations\InstallCommand->fire()
+#10 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#11 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#12 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(818): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\InstallCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /Users/Vermillion/learning-laravel-5/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 {main}
+
+Next exception 'Illuminate\Database\QueryException' with message 'SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'migrations' already exists (SQL: create table `migrations` (`migration` varchar(255) not null, `batch` int not null) default character set utf8 collate utf8_unicode_ci)' in /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php:761
+Stack trace:
+#0 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php(717): Illuminate\Database\Connection->runQueryCallback('create table `m...', Array, Object(Closure))
+#1 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php(481): Illuminate\Database\Connection->run('create table `m...', Array, Object(Closure))
+#2 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(83): Illuminate\Database\Connection->statement('create table `m...')
+#3 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(229): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#4 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(148): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#5 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(142): Illuminate\Database\Schema\Builder->create('migrations', Object(Closure))
+#6 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/InstallCommand.php(54): Illuminate\Database\Migrations\DatabaseMigrationRepository->createRepository()
+#7 [internal function]: Illuminate\Database\Console\Migrations\InstallCommand->fire()
+#8 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#9 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#10 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(818): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\InstallCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /Users/Vermillion/learning-laravel-5/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 {main}  
+[2016-09-07 13:42:22] local.ERROR: exception 'Symfony\Component\Console\Exception\CommandNotFoundException' with message 'Command "migration" is not defined.
+
+Did you mean one of these?
+    migrate
+    migrate:refresh
+    migrate:status
+    migrate:reset
+    migrate:rollback
+    migrate:install
+    make:migration' in /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php:535
+Stack trace:
+#0 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Command/HelpCommand.php(75): Symfony\Component\Console\Application->find('migration')
+#1 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Command/Command.php(256): Symfony\Component\Console\Command\HelpCommand->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(818): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Symfony\Component\Console\Command\HelpCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 /Users/Vermillion/learning-laravel-5/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 {main}  
+[2016-09-07 13:42:38] local.ERROR: exception 'Symfony\Component\Console\Exception\CommandNotFoundException' with message 'Command "migration" is not defined.
+
+Did you mean one of these?
+    migrate
+    migrate:refresh
+    migrate:status
+    migrate:reset
+    migrate:rollback
+    migrate:install
+    make:migration' in /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php:535
+Stack trace:
+#0 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(183): Symfony\Component\Console\Application->find('migration')
+#1 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 /Users/Vermillion/learning-laravel-5/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 {main}  
+[2016-09-07 13:44:55] local.ERROR: exception 'ErrorException' with message 'include(/Users/Vermillion/learning-laravel-5/vendor/composer/../../database/migrations/2014_10_12_000000_create_users_table.php): failed to open stream: No such file or directory' in /Users/Vermillion/learning-laravel-5/vendor/composer/ClassLoader.php:414
+Stack trace:
+#0 /Users/Vermillion/learning-laravel-5/vendor/composer/ClassLoader.php(414): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'include(/Users/...', '/Users/Vermilli...', 414, Array)
+#1 /Users/Vermillion/learning-laravel-5/vendor/composer/ClassLoader.php(414): Composer\Autoload\includeFile()
+#2 /Users/Vermillion/learning-laravel-5/vendor/composer/ClassLoader.php(301): Composer\Autoload\includeFile('/Users/Vermilli...')
+#3 [internal function]: Composer\Autoload\ClassLoader->loadClass('CreateUsersTabl...')
+#4 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(369): spl_autoload_call('CreateUsersTabl...')
+#5 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(156): Illuminate\Database\Migrations\Migrator->resolve('2016_09_07_1313...')
+#6 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(130): Illuminate\Database\Migrations\Migrator->runUp('/Users/Vermilli...', 1, false)
+#7 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(97): Illuminate\Database\Migrations\Migrator->runMigrationList(Array, Array)
+#8 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(66): Illuminate\Database\Migrations\Migrator->run(Array, Array)
+#9 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#10 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#11 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#12 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(818): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /Users/Vermillion/learning-laravel-5/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 {main}  
+[2016-09-07 13:47:54] local.ERROR: exception 'ErrorException' with message 'include(/Users/Vermillion/learning-laravel-5/vendor/composer/../../database/migrations/2014_10_12_000000_create_users_table.php): failed to open stream: No such file or directory' in /Users/Vermillion/learning-laravel-5/vendor/composer/ClassLoader.php:414
+Stack trace:
+#0 /Users/Vermillion/learning-laravel-5/vendor/composer/ClassLoader.php(414): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'include(/Users/...', '/Users/Vermilli...', 414, Array)
+#1 /Users/Vermillion/learning-laravel-5/vendor/composer/ClassLoader.php(414): Composer\Autoload\includeFile()
+#2 /Users/Vermillion/learning-laravel-5/vendor/composer/ClassLoader.php(301): Composer\Autoload\includeFile('/Users/Vermilli...')
+#3 [internal function]: Composer\Autoload\ClassLoader->loadClass('CreateUsersTabl...')
+#4 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(369): spl_autoload_call('CreateUsersTabl...')
+#5 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(156): Illuminate\Database\Migrations\Migrator->resolve('2016_09_07_1313...')
+#6 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(130): Illuminate\Database\Migrations\Migrator->runUp('/Users/Vermilli...', 1, false)
+#7 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(97): Illuminate\Database\Migrations\Migrator->runMigrationList(Array, Array)
+#8 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(66): Illuminate\Database\Migrations\Migrator->run(Array, Array)
+#9 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#10 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#11 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#12 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(818): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /Users/Vermillion/learning-laravel-5/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 {main}  
+[2016-09-07 13:51:26] local.ERROR: exception 'ErrorException' with message 'include(/Users/Vermillion/learning-laravel-5/vendor/composer/database/migrations/2016_09_07_131319_create_users_table.php): failed to open stream: No such file or directory' in /Users/Vermillion/learning-laravel-5/vendor/composer/ClassLoader.php:414
+Stack trace:
+#0 /Users/Vermillion/learning-laravel-5/vendor/composer/ClassLoader.php(414): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'include(/Users/...', '/Users/Vermilli...', 414, Array)
+#1 /Users/Vermillion/learning-laravel-5/vendor/composer/ClassLoader.php(414): Composer\Autoload\includeFile()
+#2 /Users/Vermillion/learning-laravel-5/vendor/composer/ClassLoader.php(301): Composer\Autoload\includeFile('/Users/Vermilli...')
+#3 [internal function]: Composer\Autoload\ClassLoader->loadClass('CreateUsersTabl...')
+#4 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(369): spl_autoload_call('CreateUsersTabl...')
+#5 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(156): Illuminate\Database\Migrations\Migrator->resolve('2016_09_07_1313...')
+#6 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(130): Illuminate\Database\Migrations\Migrator->runUp('/Users/Vermilli...', 1, false)
+#7 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(97): Illuminate\Database\Migrations\Migrator->runMigrationList(Array, Array)
+#8 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(66): Illuminate\Database\Migrations\Migrator->run(Array, Array)
+#9 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#10 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#11 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#12 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(818): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /Users/Vermillion/learning-laravel-5/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 {main}  
+[2016-09-07 13:54:37] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Cannot redeclare class Users' in /Users/Vermillion/learning-laravel-5/database/migrations/2016_09_07_131319_create_users_table.php:38
+Stack trace:
+#0 {main}  
+[2016-09-07 13:55:56] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'CreateVideosTable' not found' in /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php:369
+Stack trace:
+#0 {main}  
+[2016-09-07 13:56:28] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Database\Schema\Blueprint::int()' in /Users/Vermillion/learning-laravel-5/database/migrations/2016_09_07_131736_create_videos_table.php:18
+Stack trace:
+#0 {main}  
+[2016-09-07 13:57:01] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Database\Schema\Blueprint::int()' in /Users/Vermillion/learning-laravel-5/database/migrations/2016_09_07_133257_create-images-table.php:18
+Stack trace:
+#0 {main}  
+[2016-09-07 13:58:08] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Database\Schema\Blueprint::int()' in /Users/Vermillion/learning-laravel-5/database/migrations/2016_09_07_133257_create-images-table.php:18
+Stack trace:
+#0 {main}  
+[2016-09-08 02:09:14] local.ERROR: exception 'ErrorException' with message 'PsySH history file found at '/Users/Vermillion/.config/psysh_history'. Please delete it or move it to '/Users/Vermillion/.config/psysh/psysh_history'.' in /Users/Vermillion/learning-laravel-5/vendor/psy/psysh/src/Psy/Configuration.php:365
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(16384, 'PsySH history f...', '/Users/Vermilli...', 365, Array)
+#1 /Users/Vermillion/learning-laravel-5/vendor/psy/psysh/src/Psy/Configuration.php(365): trigger_error('PsySH history f...', 16384)
+#2 /Users/Vermillion/learning-laravel-5/vendor/psy/psysh/src/Psy/Configuration.php(521): Psy\Configuration->getHistoryFile()
+#3 /Users/Vermillion/learning-laravel-5/vendor/psy/psysh/src/Psy/Shell.php(78): Psy\Configuration->getReadline()
+#4 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Foundation/Console/TinkerCommand.php(50): Psy\Shell->__construct(Object(Psy\Configuration))
+#5 [internal function]: Illuminate\Foundation\Console\TinkerCommand->fire()
+#6 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#7 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#8 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(818): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Foundation\Console\TinkerCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /Users/Vermillion/learning-laravel-5/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-09-08 02:27:24] local.ERROR: exception 'PDOException' with message 'SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'migrations' already exists' in /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php:480
+Stack trace:
+#0 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php(480): PDOStatement->execute()
+#1 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php(754): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'create table `m...', Array)
+#2 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php(717): Illuminate\Database\Connection->runQueryCallback('create table `m...', Array, Object(Closure))
+#3 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php(481): Illuminate\Database\Connection->run('create table `m...', Array, Object(Closure))
+#4 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(83): Illuminate\Database\Connection->statement('create table `m...')
+#5 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(229): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#6 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(148): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#7 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(142): Illuminate\Database\Schema\Builder->create('migrations', Object(Closure))
+#8 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/InstallCommand.php(54): Illuminate\Database\Migrations\DatabaseMigrationRepository->createRepository()
+#9 [internal function]: Illuminate\Database\Console\Migrations\InstallCommand->fire()
+#10 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#11 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#12 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(818): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\InstallCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /Users/Vermillion/learning-laravel-5/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 {main}
+
+Next exception 'Illuminate\Database\QueryException' with message 'SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'migrations' already exists (SQL: create table `migrations` (`migration` varchar(255) not null, `batch` int not null) default character set utf8 collate utf8_unicode_ci)' in /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php:761
+Stack trace:
+#0 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php(717): Illuminate\Database\Connection->runQueryCallback('create table `m...', Array, Object(Closure))
+#1 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Connection.php(481): Illuminate\Database\Connection->run('create table `m...', Array, Object(Closure))
+#2 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(83): Illuminate\Database\Connection->statement('create table `m...')
+#3 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(229): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#4 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(148): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#5 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(142): Illuminate\Database\Schema\Builder->create('migrations', Object(Closure))
+#6 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/InstallCommand.php(54): Illuminate\Database\Migrations\DatabaseMigrationRepository->createRepository()
+#7 [internal function]: Illuminate\Database\Console\Migrations\InstallCommand->fire()
+#8 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Container/Container.php(507): call_user_func_array(Array, Array)
+#9 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#10 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(818): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\InstallCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /Users/Vermillion/learning-laravel-5/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 {main}  
+[2016-09-08 02:27:41] local.ERROR: exception 'Symfony\Component\Console\Exception\CommandNotFoundException' with message 'Command "update" is not defined.' in /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php:535
+Stack trace:
+#0 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(183): Symfony\Component\Console\Application->find('update')
+#1 /Users/Vermillion/learning-laravel-5/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 /Users/Vermillion/learning-laravel-5/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 /Users/Vermillion/learning-laravel-5/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 {main}  
