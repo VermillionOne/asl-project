@@ -11,6 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/**
+ * Route to Welcome View through PagesController
+ */
+Route::get('/', 'PagesController@welcome');
+
+/**
+ * Route to Sign-in View through SignInController
+ */
+Route::get('signin', 'SignInController@signin');
+// Route::get('signup', 'PagesController@signup');
+

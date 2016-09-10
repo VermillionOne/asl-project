@@ -8,9 +8,8 @@ use App\Http\Requests;
 
 class PagesController extends Controller
 {
-    public function about()
+    public function signin()
     {
-
-        return view('pages.about');
+        return view('signin');
     }
 }
