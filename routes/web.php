@@ -25,6 +25,6 @@ Route::get('signup', 'SignInController@signup');
 /**
  * Route to Listr-main View through Pages
  */
-Route::get('signup', 'SignInController@listr');
+Route::get('listr', 'PagesController@listr_main');
 
 
