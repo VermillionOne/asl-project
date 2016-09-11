@@ -1,20 +1,18 @@
+<!-- Sign-in Blade template : /resources/views/signin.blade.php -->
 @extends('master')
 
 @section('content')
+    <section class="listr-form-holder">
 
-<div class="row">
-    <div class="col-xs-12 col-sm-10 col-md-8 col-lg-8 col-sm-offset-1 col-md-offset-2 col-lg-offset-2">
-        <div class="well">
-            <form action="" method="POST" role="form">
+        <form action="" method="POST" role="form">
 
-                <div class="form-group">
-                    <label for="">label</label>
-                    <input type="text" class="form-control" id="" placeholder="Input field">
-                </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="" placeholder="Username">
+                <input type="" class="form-control" id="" placeholder="Password">
+            </div>
 
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </div>
-    </div>
-</div>
+            <button type="submit" class="btn listr-form-submit">Login</button>
+            <a href="" type="submit" class="btn btn-primary listr-form-change">New Account</a>
+        </form>
+    </section>
 @stop

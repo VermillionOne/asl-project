@@ -13,12 +13,18 @@
 
 /**
  * Route to Welcome View through PagesController
+ * Welcome follows through to Signin
  */
 Route::get('/', 'PagesController@welcome');
 
 /**
- * Route to Sign-in View through SignInController
+ * Route to Sign-up View through SignUpController
  */
-Route::get('signin', 'SignInController@signin');
-// Route::get('signup', 'PagesController@signup');
+Route::get('signup', 'SignInController@signup');
+
+/**
+ * Route to Listr-main View through Pages
+ */
+Route::get('signup', 'SignInController@listr');
+
 

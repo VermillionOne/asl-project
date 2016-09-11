@@ -8,8 +8,22 @@ use App\Http\Requests;
 
 class PagesController extends Controller
 {
-    public function signin()
+
+    public function welcome()
     {
         return view('signin');
     }
+
+    public function signup()
+    {
+        return view('signup');
+    }
+
+    public function listr_main()
+    {
+        return view('listr_main');
+    }
+
+
+
 }
