@@ -38,6 +38,9 @@ body {
             color: $brand-secondary;
             margin: 0 0 40px;
         }
+        textarea.form-control{
+            @extend input.form-control;
+        }
         .btn {
             border: 0px solid;
             border-radius: 0px;

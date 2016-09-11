@@ -2339,52 +2339,70 @@ input[type="search"] {
   -webkit-appearance: none; }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
-  input[type="date"].form-control,
+  input[type="date"].form-control, .listr-form-holder form textarea[type="date"].form-control, .listr-create-form form textarea[type="date"].form-control,
   input[type="time"].form-control,
+  .listr-form-holder form textarea[type="time"].form-control,
+  .listr-create-form form textarea[type="time"].form-control,
   input[type="datetime-local"].form-control,
-  input[type="month"].form-control {
+  .listr-form-holder form textarea[type="datetime-local"].form-control,
+  .listr-create-form form textarea[type="datetime-local"].form-control,
+  input[type="month"].form-control,
+  .listr-form-holder form textarea[type="month"].form-control,
+  .listr-create-form form textarea[type="month"].form-control {
     line-height: 36px; }
-  input[type="date"].input-sm, .input-group-sm > input[type="date"].form-control,
+  input[type="date"].input-sm, .input-group-sm > input[type="date"].form-control, .listr-form-holder form .input-group-sm > textarea[type="date"].form-control, .listr-create-form form .input-group-sm > textarea[type="date"].form-control,
   .input-group-sm > input[type="date"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="date"].btn,
   .input-group-sm input[type="date"],
   input[type="time"].input-sm,
   .input-group-sm > input[type="time"].form-control,
+  .listr-form-holder form .input-group-sm > textarea[type="time"].form-control,
+  .listr-create-form form .input-group-sm > textarea[type="time"].form-control,
   .input-group-sm > input[type="time"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="time"].btn,
   .input-group-sm
   input[type="time"],
   input[type="datetime-local"].input-sm,
   .input-group-sm > input[type="datetime-local"].form-control,
+  .listr-form-holder form .input-group-sm > textarea[type="datetime-local"].form-control,
+  .listr-create-form form .input-group-sm > textarea[type="datetime-local"].form-control,
   .input-group-sm > input[type="datetime-local"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="datetime-local"].btn,
   .input-group-sm
   input[type="datetime-local"],
   input[type="month"].input-sm,
   .input-group-sm > input[type="month"].form-control,
+  .listr-form-holder form .input-group-sm > textarea[type="month"].form-control,
+  .listr-create-form form .input-group-sm > textarea[type="month"].form-control,
   .input-group-sm > input[type="month"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="month"].btn,
   .input-group-sm
   input[type="month"] {
     line-height: 30px; }
-  input[type="date"].input-lg, .input-group-lg > input[type="date"].form-control,
+  input[type="date"].input-lg, .input-group-lg > input[type="date"].form-control, .listr-form-holder form .input-group-lg > textarea[type="date"].form-control, .listr-create-form form .input-group-lg > textarea[type="date"].form-control,
   .input-group-lg > input[type="date"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="date"].btn,
   .input-group-lg input[type="date"],
   input[type="time"].input-lg,
   .input-group-lg > input[type="time"].form-control,
+  .listr-form-holder form .input-group-lg > textarea[type="time"].form-control,
+  .listr-create-form form .input-group-lg > textarea[type="time"].form-control,
   .input-group-lg > input[type="time"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="time"].btn,
   .input-group-lg
   input[type="time"],
   input[type="datetime-local"].input-lg,
   .input-group-lg > input[type="datetime-local"].form-control,
+  .listr-form-holder form .input-group-lg > textarea[type="datetime-local"].form-control,
+  .listr-create-form form .input-group-lg > textarea[type="datetime-local"].form-control,
   .input-group-lg > input[type="datetime-local"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="datetime-local"].btn,
   .input-group-lg
   input[type="datetime-local"],
   input[type="month"].input-lg,
   .input-group-lg > input[type="month"].form-control,
+  .listr-form-holder form .input-group-lg > textarea[type="month"].form-control,
+  .listr-create-form form .input-group-lg > textarea[type="month"].form-control,
   .input-group-lg > input[type="month"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="month"].btn,
   .input-group-lg
@@ -7982,7 +8000,7 @@ body {
   padding: 40px;
   width: calc(100% - 80px);
   min-height: 400px; }
-  .listr-form-holder form input.form-control, .listr-create-form form input.form-control {
+  .listr-form-holder form input.form-control, .listr-create-form form input.form-control, .listr-form-holder form textarea.form-control, .listr-create-form form textarea.form-control {
     border-radius: 0px;
     border: 0px solid;
     padding: 5px 10px;
@@ -8019,25 +8037,30 @@ body {
 
 .listr-main-new-form-fields-holder {
   background-color: #fff;
-  border-radius: 10px;
-  width: 50%;
+  width: 100%;
   padding: 0 0 10px 0;
-  float: right;
-  font-size: 1.35em; }
+  font-size: 1.35em;
+  margin: 0 0 80px 0;
+  position: relative; }
   .listr-main-new-form-fields-holder ul {
     display: block;
     float: initial;
-    margin: 20px 0 10px;
-    padding: 0 20px 0 0; }
+    margin: 0 0 10px;
+    padding: 10px 0 0 0; }
     .listr-main-new-form-fields-holder ul li {
       float: initial;
       margin: 5px 0 0;
       display: block; }
       .listr-main-new-form-fields-holder ul li a {
         color: #1292b2;
+        border-radius: 5px;
         display: block;
-        margin: 0 0 0 20px;
-        text-decoration: none; }
+        margin: 0 0 0 10px;
+        padding: 0 0 0 10px;
+        text-decoration: none;
+        width: 80%; }
+        .listr-main-new-form-fields-holder ul li a:hover {
+          background-color: rgba(255, 126, 51, 0.25); }
         .listr-main-new-form-fields-holder ul li a span {
           margin: 0 5px 0 0; }
   .listr-main-new-form-fields-holder .listr-new-form-fields-toggle {
@@ -8061,7 +8084,6 @@ body {
 
 .listr-main-lists-holder {
   margin: 40px 0;
-  max-width: 800px;
   padding: 0;
   position: relative;
   width: calc(100% - 480px);
