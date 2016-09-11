@@ -23,8 +23,11 @@ Route::get('/', 'PagesController@welcome');
 Route::get('signup', 'SignInController@signup');
 
 /**
- * Route to Listr-main View through Pages
+ * Route to Listr-main View through PagesController
  */
 Route::get('listr', 'PagesController@listr_main');
 
-
+/**
+ * Route to Listr-single View through PagesController
+ */
+Route::get('single', 'PagesController@listr_single');
