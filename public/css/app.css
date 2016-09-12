@@ -7983,6 +7983,9 @@ body {
   background-size: 25%;
   height: 100%;
   z-index: 1; }
+  body .container-fluid {
+    padding-left: 0;
+    padding-right: 0; }
 
 .page-header {
   background-color: #ECECEC;
@@ -8022,6 +8025,13 @@ body {
       color: #1292b2; }
       .listr-form-holder form .btn.listr-form-submit:hover, .listr-create-form form .btn.listr-form-submit:hover {
         background-color: #e6e6e6; }
+
+@media screen and (max-width: 800px) {
+  .page-header {
+    padding: 20px; }
+    .page-header .listr-master-logo .listr-master-logo-svg {
+      width: 55vw;
+      max-width: 396px; } }
 
 /**
  * Listr Main View
@@ -8103,7 +8113,7 @@ body {
         float: right;
         background-color: transparent;
         border: 0px solid;
-        padding: 0 10px; }
+        padding: 0 20px; }
     .listr-main-lists-holder .listr-main-list ul {
       list-style-type: none;
       margin: 20px 0;
@@ -8118,18 +8128,19 @@ body {
 
 @media screen and (max-width: 800px) {
   .listr-create-form {
-    margin: 40px auto;
+    margin: 20px auto;
     float: initial;
     width: calc(100% - 40px); }
   .listr-main-lists-holder {
     float: initial;
     width: 100%;
+    margin: 20px 0;
     padding: 0; }
     .listr-main-lists-holder .listr-main-list {
       float: initial;
       max-width: 400px;
-      margin: 0 auto 40px;
-      padding: 40px;
+      margin: 0 auto 20px;
+      padding: 10px 0 0 40px;
       width: calc(100% - 40px);
       min-height: 400px; } }
 

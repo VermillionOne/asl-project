@@ -6,7 +6,7 @@
     <section class="listr-form-holder listr-create-form">
 
 
-        <form action="" method="POST" role="form">
+{{--         <form action="" method="POST" role="form">
 
             <div class="form-group">
                 <input type="text" class="form-control" id="" placeholder="List Item Input">
@@ -28,18 +28,20 @@
 
             <button type="submit" class="btn listr-form-submit">Create Note</button>
 
-        </form>
-{{--
+        </form> --}}
+
         {!! Form::open() !!}
-            {!! Form::text('name', '',array('class' => 'form-control', 'placeholder' => 'List Item Input')) !!}
-            {!! Form::textarea($name, $value, []) !!}
-
-                <ul>
-                    <li><a href=""><span class="fa fa-plus"></span>List</a></li>
-                    <li><a href=""><span class="fa fa-plus"></span>Note</a></li>
-                </ul>
-
-        {!! Form::close() !!} --}}
+            <div class="form-group">
+                {!! Form::text('name', '', ['class' => 'form-control', 'placeholder' => 'List Item Input']) !!}
+                {!! Form::textarea('note', '', ['class' => 'form-control', 'placeholder' => 'Note Item Input', 'rows' => '3']) !!}
+            </div>
+                <div class="listr-main-new-form-fields-holder">
+                    <ul>
+                        <li><a href=""><span class="fa fa-plus"></span>List</a></li>
+                        <li><a href=""><span class="fa fa-plus"></span>Note</a></li>
+                    </ul>
+                </div>
+        {!! Form::close() !!}
 
     </section>
 

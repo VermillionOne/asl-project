@@ -6,6 +6,10 @@ body {
     background-size: 25%;
     height: 100%;
     z-index: 1;
+    .container-fluid {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 .page-header {
     background-color: #ECECEC;
@@ -63,4 +67,15 @@ body {
             }
         }
     }
+}
+@media screen and (max-width: 800px) {
+    .page-header {
+    padding: 20px;
+    .listr-master-logo {
+        .listr-master-logo-svg {
+            width: 55vw;
+            max-width: 1200px * .33;
+        }
+    }
+}
 }

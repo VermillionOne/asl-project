@@ -4,15 +4,17 @@
 @section('content')
     <section class="listr-form-holder">
 
-        <form action="" method="POST" role="form">
-
+        {!! Form::open() !!}
             <div class="form-group">
-                <input type="text" class="form-control" id="" placeholder="Username">
-                <input type="" class="form-control" id="" placeholder="Password">
+                {!! Form::text('username', '', ['class' => 'form-control', 'placeholder' => 'Username']) !!}
+                {!! Form::password('password', ['class' => 'form-control', 'placeholder' => 'Password']) !!}
             </div>
+            {!! Form::submit('Sign In', ['class' => 'btn listr-form-submit']) !!}
+            <a href="" type="button" class="btn btn-primary listr-form-change">New Account</a>
 
-            <button type="submit" class="btn listr-form-submit">Login</button>
-            <a href="" type="submit" class="btn btn-primary listr-form-change">New Account</a>
-        </form>
+        {!! Form::close() !!}
+
+
     </section>
+
 @stop
