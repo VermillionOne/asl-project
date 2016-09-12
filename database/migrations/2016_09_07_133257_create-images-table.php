@@ -16,10 +16,15 @@ class CreateImagesTable extends Migration
         Schema::create('images', function (Blueprint $table) {
             $table->increments('imageId')->index();
             $table->integer('userId');
-            $table->integer('listId');
+            $table->integer('listId')->unsigned();
             $table->string('imageName');
             $table->string('imageUrl')->unique();
             $table->timestamps();
+
+            $table->foreign('listId')
+                  ->references('listId')
+                  ->on('user_lists')
+                  ->onDelete('cascade');
         });
     }
 

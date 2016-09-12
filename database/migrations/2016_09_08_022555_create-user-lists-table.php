@@ -15,11 +15,18 @@ class CreateUserListsTable extends Migration
     {
         Schema::create('userLists', function (Blueprint $table) {
             $table->increments('listId')->index();
-            $table->integer('userId');
+            $table->integer('userId')->unsigned();
             $table->string('listTitle');
             $table->string('listItems');
             $table->timestamps();
+
+            $table->foreign('userId')
+                  ->references('id')
+                  ->on('users')
+                  ->onDelete('cascade');
         });
+
+
     }
 
     /**

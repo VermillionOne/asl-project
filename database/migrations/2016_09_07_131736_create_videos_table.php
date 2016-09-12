@@ -16,10 +16,15 @@ class CreateVideosTable extends Migration
         Schema::create('videos', function (Blueprint $table) {
             $table->increments('videoId')->index();
             $table->integer('userId');
-            $table->integer('listId');
+            $table->integer('listId')->unsigned();
             $table->string('videoName');
             $table->string('videoUrl')->unique();
             $table->timestamps();
+
+            $table->foreign('listId')
+                  ->references('listId')
+                  ->on('user_lists')
+                  ->onDelete('cascade');
         });
     }
 

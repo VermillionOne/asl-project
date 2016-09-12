@@ -16,9 +16,15 @@ class CreateNotesTable extends Migration
         Schema::create('notes', function (Blueprint $table) {
             $table->increments('noteId')->index();
             $table->integer('userId');
-            $table->integer('listId');
+            $table->integer('listId')->unsigned();
             $table->text('noteBody');
             $table->timestamps();
+
+            $table->foreign('listId')
+                  ->references('listId')
+                  ->on('user_lists')
+                  ->onDelete('cascade');
+
         });
     }
 

@@ -18,7 +18,7 @@
     <header class="page-header">
 
         <div class="listr-master-logo">
-            <a href="">
+            <a href="/">
                 <svg class="listr-master-logo-svg" xmlns="http://www.w3.org/2000/svg" width="150" viewBox="0 0 311.22 123.4">
                     <title>listr-logo</title>
                     <rect x="1" y="1" width="23.79" height="99.72" fill="#0cf"/>

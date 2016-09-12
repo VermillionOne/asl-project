@@ -10,10 +10,9 @@
                 {!! Form::password('password', ['class' => 'form-control', 'placeholder' => 'Password']) !!}
             </div>
             {!! Form::submit('Sign In', ['class' => 'btn listr-form-submit']) !!}
-            <a href="" type="button" class="btn btn-primary listr-form-change">New Account</a>
+            <a href="/signup" type="button" class="btn btn-primary listr-form-change">New Account</a>
 
         {!! Form::close() !!}
-
 
     </section>
 
