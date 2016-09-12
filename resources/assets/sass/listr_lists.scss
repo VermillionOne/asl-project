@@ -1,0 +1,142 @@
+/**
+ * Listr Main View
+ */
+
+.listr-create-form {
+    @extend .listr-form-holder;
+    position: relative;
+    float: left;
+    margin: 40px;
+    .btn {
+        position: absolute;
+        bottom: 40px;
+        left: 40px;
+    }
+}
+.listr-main-new-form-fields-holder {
+    background-color: $body-bg;
+    width: 100%;
+    padding: 0 0 10px 0;
+    font-size: 1.35em;
+    margin: 0 0 80px 0;
+    position: relative;
+    ul {
+        display: block;
+        float: initial;
+        margin: 0 0 10px;
+        padding: 10px 0 0 0;
+        li {
+            float: initial;
+            margin: 5px 0 0;
+            display: block;
+            a {
+                color: $brand-secondary;
+                border-radius: 5px;
+                display: block;
+                margin: 0 0 0 10px;
+                padding: 0 0 0 10px;
+                text-decoration: none;
+                width: 80%;
+                &:hover {
+                    background-color: rgba(255, 126, 51, 0.25);
+                }
+                span {
+                    margin: 0 5px 0 0;
+                }
+            }
+        }
+    }
+    .listr-new-form-fields-toggle {
+        background-color: $body-bg;
+        border: 0px solid;
+        border-radius: 20px;
+        float: right;
+        height: 30px;
+        margin: 0 10px;
+        padding: 4px 5px;
+        position: relative;
+        transition: all 1s;
+        -moz-transition: all 1s;
+        -webkit-transition: all 1s;
+        width: 30px;
+        &.toggled {
+            top: 5px;
+            transform: rotate(-675deg);
+            -moz-transform: rotate(-675deg);
+            -webkit-transform: rotate(-675deg);
+        }
+    }
+}
+.listr-main-lists-holder {
+    margin: 40px 0;
+    padding: 0;
+    position: relative;
+    width: calc(100% - 480px);
+    float: right;
+    .listr-main-list {
+        background-color: #fff;
+        border-left: 2px solid #00ccff;
+        float: left;
+        margin: 0 40px 40px 0;
+        position: relative;
+        padding: 10px 0 20px 40px;
+        width: calc(50% - 40px);
+        h2 {
+            border-bottom: 2px solid $brand-primary;
+            margin: 0;
+            button {
+                float: right;
+                background-color: transparent;
+                border: 0px solid;
+                padding: 0 20px;
+            }
+        }
+        ul {
+            list-style-type: none;
+            margin: 20px 0;
+            padding: 0;
+            li {
+                span {
+                    display: inline-block;
+                    margin: 0 10px 0 0;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1000px) {
+    .listr-main-lists-holder {
+        .listr-main-list {
+            width: calc(100% - 20px);
+        }
+    }
+}
+@media screen and (max-width: 800px) {
+    .listr-create-form {
+        margin: 20px auto;
+        float: initial;
+        width: calc(100% - 40px);
+    }
+    .listr-main-lists-holder {
+        float: initial;
+        width: 100%;
+        margin: 20px 0;
+        padding: 0;
+        .listr-main-list {
+            float: initial;
+            max-width: 400px;
+            margin: 0 auto 20px;
+            padding: 10px 0 0 40px;
+            width: calc(100% - 40px);
+            min-height: 400px;
+        }
+    }
+}
+@media screen and (max-width: 450px) {
+    .listr-main-new-form-fields-holder {
+        width: 100%;
+
+    }
+}
+
+
