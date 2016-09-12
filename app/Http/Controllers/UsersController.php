@@ -27,7 +27,7 @@ class UsersController extends Controller
     {
         $user = User::create(Request::all());
 
-        return redirect('signin');
+        return redirect('listr');
     }
 
 }
