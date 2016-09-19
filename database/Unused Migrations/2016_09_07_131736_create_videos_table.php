@@ -14,18 +14,18 @@ class CreateVideosTable extends Migration
     public function up()
     {
         Schema::create('videos', function (Blueprint $table) {
-            $table->increments('videoId')->index();
-            $table->integer('userId');
-            $table->integer('listId')->unsigned();
-            $table->string('videoName');
-            $table->string('videoUrl')->unique();
+            $table->engine = 'InnoDB';
+            $table->increments('video_id');
+            $table->integer('book_id')->unsigned();
+            // $table->foreign('book_id')
+            //       ->references('book_id')
+            //       ->on('books')
+            //       ->onDelete('cascade');
+            $table->string('book_order');
+            $table->string('video_url')->unique();
             $table->timestamps();
-
-            $table->foreign('listId')
-                  ->references('listId')
-                  ->on('user_lists')
-                  ->onDelete('cascade');
         });
+
     }
 
     /**

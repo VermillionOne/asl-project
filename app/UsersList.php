@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Note extends Model
+class UsersList extends Model
 {
     /**
      * The attributes that are mass assignable.
@@ -12,7 +12,7 @@ class Note extends Model
      * @var array
      */
     protected $fillable = [
-        'book_order','note_body',
+        'book_order','list_items',
     ];
 
     public function book()

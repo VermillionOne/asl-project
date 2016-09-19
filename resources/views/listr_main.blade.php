@@ -1,5 +1,5 @@
 <!-- Listr Main Page Blade template : /resources/views/listr_main.blade.php -->
-@extends('master')
+@extends('layouts.app')
 
 @section('content')
 
@@ -30,74 +30,84 @@
 
         </form> --}}
 
-        {!! Form::open() !!}
-            <div class="form-group">
-                {!! Form::text('name', '', ['class' => 'form-control', 'placeholder' => 'List Item Input']) !!}
-                {!! Form::textarea('note', '', ['class' => 'form-control', 'placeholder' => 'Note Item Input', 'rows' => '3']) !!}
+
+            {{-- <div class="form-group">
+                {!! Form::label('date', 'Climb date', ['class' => 'control-label']) !!}
+                {!! Form::text('date', null, array( 'class'=>'form-control', 'placeholder'=>'yyyy-mm-dd')) !!}
             </div>
-                <div class="listr-main-new-form-fields-holder">
-                    <ul>
-                        <li><a href=""><span class="fa fa-plus"></span>List</a></li>
-                        <li><a href=""><span class="fa fa-plus"></span>Note</a></li>
-                    </ul>
-                </div>
+            <div class="form-group">
+                {!! Form::label('Route name') !!}
+                {!! Form::text('name', ( isset($climb->route->name) ? $climb->route->name : null ), array('class'=>'form-control' )) !!}
+            </div>
+            <div class="form-group">
+                {!! Form::label('Area') !!}
+                {!! Form::text('area', isset($climb->route->area->name) ? $climb->route->area->name : null), array( 'class'=>'form-control' )) !!}
+            </div> --}}
+
+
+        {!! Form::open(['url' => 'books']) !!}
+            <div class="form-group">
+                {!! Form::text('book_title', '', ['class' => 'form-control', 'placeholder' => 'Name Your Notepad']) !!}
+            </div>
+
+            <div class="form-group">
+                <ul class="list-group">
+                    <li class="list-group-item">{!! Form::text('list-item.1', '', ['class' => 'form-control', 'placeholder' => 'List Item Input']) !!}</li>
+                    <li class="list-group-item">{!! Form::text('list-item.2', '', ['class' => 'form-control', 'placeholder' => 'List Item Input']) !!}</li>
+                    <li class="list-group-item">{!! Form::text('list-item.3', '', ['class' => 'form-control', 'placeholder' => 'List Item Input']) !!}</li>
+                    <li class="list-group-item">{!! Form::text('list-item.4', '', ['class' => 'form-control', 'placeholder' => 'List Item Input']) !!}</li>
+                </ul>
+            </div>
+
+            <div class="form-group">
+                {!! Form::textarea('note_body', ( isset($book->note->title) ? $climb->route->name : null ), ['class' => 'form-control', 'placeholder' => 'Note Item Input', 'rows' => '3']) !!}
+            </div>
+
+            <div class="listr-main-new-form-fields-holder">
+                <ul>
+                    <li><a href=""><span class="fa fa-plus"></span>Image</a></li>
+                    <li><a href=""><span class="fa fa-plus"></span>Video</a></li>
+                </ul>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn listr-form-submit">Create Note</button>
+            </div>
+
         {!! Form::close() !!}
 
     </section>
 
     <section class="listr-main-lists-holder">
 
-        <article class="listr-main-list">
-            <h2>List Title <button class="fa fa-ellipsis-v listr-main-list-menu-toggle"></button></h2>
+        @for($i = 0; $i < count($books); $i++)
 
-            <ul>
-                <li><span class="fa fa-square-o"></span>List Item</li>
-                <li><span class="fa fa-square-o"></span>List Item</li>
-                <li><span class="fa fa-square-o"></span>List Item</li>
-                <li><span class="fa fa-square-o"></span>List Item</li>
-                <li><span class="fa fa-square-o"></span>List Item</li>
-            </ul>
+        {{-- {{dd($books[$i])}} --}}
+        {{-- {{dd($list_items[$i])}} --}}
+
+
+
+        <article class="listr-main-list">
+            <h2>{{$books[$i]->book_title}} <button class="fa fa-ellipsis-v listr-main-list-menu-toggle"></button></h2>
+
+            {{-- @for($book->usersList as $list) --}}
+
+                <ul>
+                    @foreach($list_items[$i] as $item)
+        {{-- {{dd($item)}} --}}
+
+                        <li><span class="fa fa-square-o"></span>{{$item}}</li>
+                    @endforeach
+                </ul>
+
+            {{-- @endfor --}}
+            <p>
+                {{$books[$i]->note[0]->note_body}}
+            </p>
 
         </article>
 
-        <article class="listr-main-list">
-            <h2>List Title <button class="fa fa-ellipsis-v listr-main-list-menu-toggle"></button></h2>
-
-            <ul>
-                <li><span class="fa fa-square-o"></span>List Item</li>
-                <li><span class="fa fa-square-o"></span>List Item</li>
-                <li><span class="fa fa-square-o"></span>List Item</li>
-                <li><span class="fa fa-square-o"></span>List Item</li>
-                <li><span class="fa fa-square-o"></span>List Item</li>
-            </ul>
-
-        </article>
-
-        <article class="listr-main-list">
-            <h2>List Title <button class="fa fa-ellipsis-v listr-main-list-menu-toggle"></button></h2>
-
-            <ul>
-                <li><span class="fa fa-square-o"></span>List Item</li>
-                <li><span class="fa fa-square-o"></span>List Item</li>
-                <li><span class="fa fa-square-o"></span>List Item</li>
-                <li><span class="fa fa-square-o"></span>List Item</li>
-                <li><span class="fa fa-square-o"></span>List Item</li>
-            </ul>
-
-        </article>
-
-        <article class="listr-main-list">
-            <h2>List Title <button class="fa fa-ellipsis-v listr-main-list-menu-toggle"></button></h2>
-
-            <ul>
-                <li><span class="fa fa-square-o"></span>List Item</li>
-                <li><span class="fa fa-square-o"></span>List Item</li>
-                <li><span class="fa fa-square-o"></span>List Item</li>
-                <li><span class="fa fa-square-o"></span>List Item</li>
-                <li><span class="fa fa-square-o"></span>List Item</li>
-            </ul>
-
-        </article>
+        @endfor
 
     </section>
 

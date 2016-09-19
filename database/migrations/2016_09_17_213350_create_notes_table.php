@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
@@ -14,17 +13,10 @@ class CreateNotesTable extends Migration
     public function up()
     {
         Schema::create('notes', function (Blueprint $table) {
-            $table->increments('noteId')->index();
-            $table->integer('userId');
-            $table->integer('listId')->unsigned();
-            $table->text('noteBody');
+            $table->increments('id');
+            $table->text('note_body');
+            // $table->integer('book_order');
             $table->timestamps();
-
-            $table->foreign('listId')
-                  ->references('listId')
-                  ->on('user_lists')
-                  ->onDelete('cascade');
-
         });
     }
 
@@ -35,6 +27,6 @@ class CreateNotesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('notes');
+        Schema::drop('notes');
     }
 }

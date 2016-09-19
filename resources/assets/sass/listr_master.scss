@@ -22,6 +22,10 @@ body {
             max-width: 1200px * .33;
         }
     }
+    svg {
+        width: 33vw;
+        max-width: 1200px * .33;
+    }
 }
 .listr-form-holder {
     background-color: $brand-primary;
@@ -70,12 +74,12 @@ body {
 }
 @media screen and (max-width: 800px) {
     .page-header {
-    padding: 20px;
-    .listr-master-logo {
-        .listr-master-logo-svg {
-            width: 55vw;
-            max-width: 1200px * .33;
+        padding: 20px;
+        .listr-master-logo {
+            .listr-master-logo-svg {
+                width: 55vw;
+                max-width: 1200px * .33;
+            }
         }
     }
-}
 }
