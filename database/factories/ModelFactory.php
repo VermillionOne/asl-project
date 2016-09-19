@@ -1,4 +1,4 @@
-<?php
+    <?php
 
 /*
 |--------------------------------------------------------------------------
@@ -25,18 +25,25 @@ $factory->define('App\User', function (Faker\Generator $faker) {
     ];
 });
 
-$factory->define('App\Userlist', function (Faker\Generator $faker) {
+$factory->define('App\User_List', function (Faker\Generator $faker) {
     return [
-        'userId' => mt_rand(3, 27),
-        'listTitle' => $faker->sentence(1),
-        'listItems' => json_encode($faker->sentences(mt_rand(3,12)))
+        'book_id' => mt_rand(3, 27),
+        'book_order' => mt_rand(1, 100),
+        'list_items' => json_encode($faker->sentences(mt_rand(3,12)))
     ];
 });
 
 $factory->define('App\Note', function (Faker\Generator $faker) {
     return [
-        'userId' => mt_rand(3, 27),
-        'listId' => mt_rand(1, 100),
-        'noteBody' => $faker->paragraph
+        'user_id' => mt_rand(3, 27),
+        'list_id' => mt_rand(1, 100),
+        'note_body' => $faker->paragraph
+    ];
+});
+
+$factory->define('App\Book', function (Faker\Generator $faker) {
+    return [
+        'user_id' => mt_rand(1, 50),
+        'book_title' => $faker->sentence,
     ];
 });

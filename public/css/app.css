@@ -7995,6 +7995,9 @@ body {
   .page-header .listr-master-logo .listr-master-logo-svg {
     width: 33vw;
     max-width: 396px; }
+  .page-header svg {
+    width: 33vw;
+    max-width: 396px; }
 
 .listr-form-holder, .listr-create-form {
   background-color: #00ccff;
@@ -8044,6 +8047,18 @@ body {
     position: absolute;
     bottom: 40px;
     left: 40px; }
+  .listr-create-form form .form-group {
+    margin: 0 0 30px; }
+    .listr-create-form form .form-group .form-control {
+      margin: 0; }
+    .listr-create-form form .form-group .list-group-item {
+      padding: 0; }
+      .listr-create-form form .form-group .list-group-item:first-child {
+        border-radius: 0; }
+      .listr-create-form form .form-group .list-group-item:last-child {
+        border-radius: 0; }
+      .listr-create-form form .form-group .list-group-item input.form-control, .listr-create-form form .form-group .list-group-item textarea.form-control {
+        margin: 0; }
 
 .listr-main-new-form-fields-holder {
   background-color: #fff;

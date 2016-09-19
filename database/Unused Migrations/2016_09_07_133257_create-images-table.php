@@ -14,17 +14,17 @@ class CreateImagesTable extends Migration
     public function up()
     {
         Schema::create('images', function (Blueprint $table) {
-            $table->increments('imageId')->index();
-            $table->integer('userId');
-            $table->integer('listId')->unsigned();
-            $table->string('imageName');
-            $table->string('imageUrl')->unique();
+            $table->engine = 'InnoDB';
+            $table->increments('image_id');
+            $table->integer('book_id')->unsigned();
+            // $table->foreign('book_id')
+            //       ->references('book_id')
+            //       ->on('books')
+            //       ->onDelete('cascade');
+            $table->string('book_order');
+            $table->string('image_url')->unique();
             $table->timestamps();
 
-            $table->foreign('listId')
-                  ->references('listId')
-                  ->on('user_lists')
-                  ->onDelete('cascade');
         });
     }
 

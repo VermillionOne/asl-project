@@ -1,5 +1,5 @@
 <!-- Listr Main Page Blade template : /resources/views/listr_main.blade.php -->
-@extends('master')
+@extends('layouts.app')
 
 @section('content')
 
@@ -30,17 +30,50 @@
 
         </form> --}}
 
-        {!! Form::open() !!}
-            <div class="form-group">
-                {!! Form::text('name', '', ['class' => 'form-control', 'placeholder' => 'List Item Input']) !!}
-                {!! Form::textarea('note', '', ['class' => 'form-control', 'placeholder' => 'Note Item Input', 'rows' => '3']) !!}
+
+            {{-- <div class="form-group">
+                {!! Form::label('date', 'Climb date', ['class' => 'control-label']) !!}
+                {!! Form::text('date', null, array( 'class'=>'form-control', 'placeholder'=>'yyyy-mm-dd')) !!}
             </div>
-                <div class="listr-main-new-form-fields-holder">
-                    <ul>
-                        <li><a href=""><span class="fa fa-plus"></span>List</a></li>
-                        <li><a href=""><span class="fa fa-plus"></span>Note</a></li>
-                    </ul>
-                </div>
+            <div class="form-group">
+                {!! Form::label('Route name') !!}
+                {!! Form::text('name', ( isset($climb->route->name) ? $climb->route->name : null ), array('class'=>'form-control' )) !!}
+            </div>
+            <div class="form-group">
+                {!! Form::label('Area') !!}
+                {!! Form::text('area', isset($climb->route->area->name) ? $climb->route->area->name : null), array( 'class'=>'form-control' )) !!}
+            </div> --}}
+
+
+        {!! Form::open(['url' => 'books']) !!}
+            <div class="form-group">
+                {!! Form::text('title', '', ['class' => 'form-control', 'placeholder' => 'Name Your Notepad']) !!}
+            </div>
+
+            <div class="form-group">
+                <ul class="list-group">
+                    <li class="list-group-item">{!! Form::text('list-item.1', '', ['class' => 'form-control', 'placeholder' => 'List Item Input']) !!}</li>
+                    <li class="list-group-item">{!! Form::text('list-item.2', '', ['class' => 'form-control', 'placeholder' => 'List Item Input']) !!}</li>
+                    <li class="list-group-item">{!! Form::text('list-item.3', '', ['class' => 'form-control', 'placeholder' => 'List Item Input']) !!}</li>
+                    <li class="list-group-item">{!! Form::text('list-item.4', '', ['class' => 'form-control', 'placeholder' => 'List Item Input']) !!}</li>
+                </ul>
+            </div>
+
+            <div class="form-group">
+                {!! Form::textarea('note', ( isset($book->note->title) ? $climb->route->name : null ), ['class' => 'form-control', 'placeholder' => 'Note Item Input', 'rows' => '3']) !!}
+            </div>
+
+            <div class="listr-main-new-form-fields-holder">
+                <ul>
+                    <li><a href=""><span class="fa fa-plus"></span>List</a></li>
+                    <li><a href=""><span class="fa fa-plus"></span>Note</a></li>
+                </ul>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn listr-form-submit">Create Note</button>
+            </div>
+
         {!! Form::close() !!}
 
     </section>

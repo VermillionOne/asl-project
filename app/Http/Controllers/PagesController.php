@@ -11,19 +11,17 @@ class PagesController extends Controller
 
     public function welcome()
     {
-        return view('signin');
+        return view('auth.login');
     }
 
     public function signup()
     {
-        return view('signup');
+        return view('auth.register');
     }
 
     public function listr_main()
     {
         return view('listr_main');
     }
-
-
 
 }

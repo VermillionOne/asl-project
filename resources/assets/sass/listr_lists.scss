@@ -12,6 +12,26 @@
         bottom: 40px;
         left: 40px;
     }
+    form {
+        .form-group {
+            margin: 0 0 30px;
+            .form-control{
+                margin: 0;
+            }
+            .list-group-item {
+                padding: 0;
+                &:first-child {
+                    border-radius: 0;
+                }
+                &:last-child {
+                    border-radius: 0;
+                }
+                input.form-control {
+                    margin: 0;
+                }
+            }
+        }
+    }
 }
 .listr-main-new-form-fields-holder {
     background-color: $body-bg;

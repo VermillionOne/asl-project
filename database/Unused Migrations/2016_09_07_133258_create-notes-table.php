@@ -14,16 +14,16 @@ class CreateNotesTable extends Migration
     public function up()
     {
         Schema::create('notes', function (Blueprint $table) {
-            $table->increments('noteId')->index();
-            $table->integer('userId');
-            $table->integer('listId')->unsigned();
-            $table->text('noteBody');
+            $table->engine = 'InnoDB';
+            $table->increments('note_id');
+            $table->integer('book_id')->unsigned();
+            // $table->foreign('book_id')
+            //       ->references('book_id')
+            //       ->on('books')
+            //       ->onDelete('cascade');
+            $table->string('book_order');
+            $table->string('note_body');
             $table->timestamps();
-
-            $table->foreign('listId')
-                  ->references('listId')
-                  ->on('user_lists')
-                  ->onDelete('cascade');
 
         });
     }

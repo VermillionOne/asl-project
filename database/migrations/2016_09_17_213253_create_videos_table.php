@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
@@ -14,17 +13,11 @@ class CreateVideosTable extends Migration
     public function up()
     {
         Schema::create('videos', function (Blueprint $table) {
-            $table->increments('videoId')->index();
-            $table->integer('userId');
-            $table->integer('listId')->unsigned();
-            $table->string('videoName');
-            $table->string('videoUrl')->unique();
+            $table->increments('id');
+            $table->string('video_title');
+            $table->string('video_url')->unique();
+            $table->integer('book_order');
             $table->timestamps();
-
-            $table->foreign('listId')
-                  ->references('listId')
-                  ->on('user_lists')
-                  ->onDelete('cascade');
         });
     }
 
@@ -35,6 +28,6 @@ class CreateVideosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('videos');
+        Schema::drop('videos');
     }
 }
