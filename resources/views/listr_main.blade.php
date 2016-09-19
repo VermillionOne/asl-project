@@ -65,8 +65,8 @@
 
             <div class="listr-main-new-form-fields-holder">
                 <ul>
-                    <li><a href=""><span class="fa fa-plus"></span>List</a></li>
-                    <li><a href=""><span class="fa fa-plus"></span>Note</a></li>
+                    <li><a href=""><span class="fa fa-plus"></span>Image</a></li>
+                    <li><a href=""><span class="fa fa-plus"></span>Video</a></li>
                 </ul>
             </div>
 
@@ -82,17 +82,25 @@
 
         @for($i = 0; $i < count($books); $i++)
 
+        {{-- {{dd($books[$i])}} --}}
+        {{-- {{dd($list_items[$i])}} --}}
+
+
+
         <article class="listr-main-list">
             <h2>{{$books[$i]->book_title}} <button class="fa fa-ellipsis-v listr-main-list-menu-toggle"></button></h2>
 
-            <ul>
-                @foreach($list_items[$i] as $item)
+            {{-- @for($book->usersList as $list) --}}
 
+                <ul>
+                    @foreach($list_items[$i] as $item)
+        {{-- {{dd($item)}} --}}
 
-                    <li><span class="fa fa-square-o"></span>{{$item}}</li>
-                @endforeach
-            </ul>
+                        <li><span class="fa fa-square-o"></span>{{$item}}</li>
+                    @endforeach
+                </ul>
 
+            {{-- @endfor --}}
             <p>
                 {{$books[$i]->note[0]->note_body}}
             </p>

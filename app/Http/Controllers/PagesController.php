@@ -30,6 +30,8 @@ class PagesController extends Controller
 
         $books = $user->books()->with('note','usersList')->get();
 
+        $list_items = [];
+
         // $lists = $books[0]->usersList;
 
         foreach($books as $book)
@@ -41,17 +43,6 @@ class PagesController extends Controller
                 $list_items[] = json_decode($list->list_items);
             }
         }
-
-        // dd($list_items);
-
-        // dd($lists);
-
-        // foreach($lists)
-        // {
-
-        // }
-
-        // dd($books);
 
         return response()->view('listr_main', ['books' => $books, 'list_items' => $list_items], 200);
     }
