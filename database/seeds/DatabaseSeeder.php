@@ -31,17 +31,17 @@ class DatabaseSeeder extends Seeder
                 $book = App\Book::create([
                     //'user_id' => mt_rand(1, 50),
                     'book_title' => $faker->sentence,
-                ]);            
-             
+                ]);
+
                 // dd($user->books());
 
                 $usersList = App\UsersList::create([
-                    'book_order' => mt_rand(1, 100),
+                    // 'book_order' => mt_rand(1, 100),
                     'list_items' => json_encode($faker->sentences(mt_rand(3,12)))
                 ]);
 
                 $note = App\Note::create([
-                    'book_order' => mt_rand(1, 100),
+                    // 'book_order' => mt_rand(1, 100),
                     'note_body' => $faker->paragraph
                 ]);
 

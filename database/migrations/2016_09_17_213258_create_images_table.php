@@ -16,7 +16,7 @@ class CreateImagesTable extends Migration
             $table->increments('id');
             $table->string('image_title');
             $table->string('image_url')->unique();
-            $table->integer('book_order');
+            // $table->integer('book_order');
             $table->timestamps();
         });
     }

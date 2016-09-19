@@ -16,7 +16,7 @@ class CreateVideosTable extends Migration
             $table->increments('id');
             $table->string('video_title');
             $table->string('video_url')->unique();
-            $table->integer('book_order');
+            // $table->integer('book_order');
             $table->timestamps();
         });
     }

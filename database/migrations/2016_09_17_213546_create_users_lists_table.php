@@ -15,7 +15,7 @@ class CreateUsersListsTable extends Migration
         Schema::create('users_lists', function (Blueprint $table) {
             $table->increments('id');
             $table->text('list_items');
-            $table->integer('book_order');
+            // $table->integer('book_order');
             $table->timestamps();
         });
     }

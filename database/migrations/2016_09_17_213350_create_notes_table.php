@@ -15,7 +15,7 @@ class CreateNotesTable extends Migration
         Schema::create('notes', function (Blueprint $table) {
             $table->increments('id');
             $table->text('note_body');
-            $table->integer('book_order');
+            // $table->integer('book_order');
             $table->timestamps();
         });
     }

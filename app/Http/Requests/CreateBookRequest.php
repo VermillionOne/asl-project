@@ -25,7 +25,7 @@ class CreateBookRequest extends FormRequest
     {
         return [
 
-            'name' => 'required',
+            'book_title' => 'required',
 
         ];
     }
