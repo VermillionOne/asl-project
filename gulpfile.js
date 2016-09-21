@@ -23,11 +23,8 @@ elixir(function (mix) {
 
     mix.sass('app.scss');
 
-    mix.webpack(
-        './resources/assets/js/app.js',
-        './public/dist'
-    );
+    mix.webpack(['app.js']);
 
-    mix.version('css/app.css');
+    mix.version(['css/app.css','js/all.js']);
 
 });
