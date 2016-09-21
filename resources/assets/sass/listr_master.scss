@@ -1,0 +1,85 @@
+/**
+ *  Master
+ */
+body {
+    background-image: url('/img/listr-background-trans-25.png');
+    background-size: 25%;
+    height: 100%;
+    z-index: 1;
+    .container-fluid {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+.page-header {
+    background-color: #ECECEC;
+    margin: 0;
+    padding: 40px;
+    border-bottom: 2px solid #00CCFF;
+    .listr-master-logo {
+        .listr-master-logo-svg {
+            width: 33vw;
+            max-width: 1200px * .33;
+        }
+    }
+    svg {
+        width: 33vw;
+        max-width: 1200px * .33;
+    }
+}
+.listr-form-holder {
+    background-color: $brand-primary;
+    margin: 40px auto;
+    max-width: 400px;
+    padding: 40px;
+    width: calc(100% - 80px);
+    min-height: 400px;
+    form {
+        input.form-control {
+            border-radius: 0px;
+            border: 0px solid;
+            padding: 5px 10px;
+            font: {
+                size: 1.25em;
+                weight: 600;
+            }
+            color: $brand-secondary;
+            margin: 0 0 40px;
+        }
+        textarea.form-control{
+            @extend input.form-control;
+        }
+        .btn {
+            border: 0px solid;
+            border-radius: 0px;
+            font: {
+                size: 1.25em;
+                weight: 600;
+            }
+            text: {
+                transform: uppercase;
+            }
+            box-sizing: border-box;
+            float: left;
+            width: 49.8999999999%;
+            &.listr-form-submit {
+                background-color: $body-bg;
+                color: $brand-secondary;
+                &:hover{
+                    background-color: $laravel-border-color;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 800px) {
+    .page-header {
+        padding: 20px;
+        .listr-master-logo {
+            .listr-master-logo-svg {
+                width: 55vw;
+                max-width: 1200px * .33;
+            }
+        }
+    }
+}
